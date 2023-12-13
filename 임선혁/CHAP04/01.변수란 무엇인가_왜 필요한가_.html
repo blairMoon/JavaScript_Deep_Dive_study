@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01.변수란 무엇인가? 왜 필요한가?</title>
+</head>
+<body>
+    <h1>1. 변수란 무엇인가?</h1>
+    <ul>
+        <li>하나의 값을 저장하기 위해 확보한 메모리 공간 자체</li>
+        <li>또는 그 메모리 공간을 식별하기 위해 붙인 이름</li>
+        <li>값의 위치를 가리키는 상징적인 이름</li>
+    </ul>
+    
+    <h1>2. 변수란 왜 필요한가?</h1>
+    <ul>
+        <li>재사용</li>
+        <li>가독성</li>
+    </ul>
+
+    <script>
+        // 예제 04-01
+        // 변수를 사용하지 않을 때
+        10 + 20
+    </script>
+
+
+    <b><u>변수에 여러 개의 값을 저장하는 방법</u></b>
+    <ul>
+        <li>객체</li>
+        <li>배열</li>
+    </ul>
+
+    <script>
+        // 예제 04-02
+        
+        // 변수는 하나의 값을 저장하기 위한 수단
+        var userId = 1;
+        var userName = 'Lee';
+
+        // 객체나 배열 같은 자료구조를 사용하면 여러 개의 값을 하나로 그룹화해서 하나의 값처럼 사용할 수 있다
+        var user = {id : 1, name : 'Lee'};
+
+        var users = [
+            { id : 1, name : 'Lee'},
+            { id : 2, name : 'Kim'}
+        ]
+    </script>
+
+    <script>
+        // 예제 04-03
+        // 변수를 사용할 때
+        var result = 10 + 20;
+    </script>
+
+    <b><u>기타 용어 정리</u></b>
+    <ul>
+        <li>변수 이름(변수명)</li>
+        <li>변수 값</li>
+        <li>할당(대입, 저장)</li>
+        <li>참조</li>
+    </ul>
+
+</body>
+</html>
