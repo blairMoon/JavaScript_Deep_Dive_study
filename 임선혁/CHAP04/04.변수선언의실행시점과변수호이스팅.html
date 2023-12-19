@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04.변수선언의실행시점과변수호이스팅</title>
+</head>
+<body>
+    <h1>1. 변수 선언의 실행 시점</h1>
+    <ul>
+        <li>런타임 이전에 먼저 변수 선언이 실행</li>
+        <li>띠라서 참조 에러가 발생하지 않고 undefined가 출력됨</li>
+    </ul>
+
+    <h1>2. 변수 호이스팅</h1>
+    <ul>
+        <li>변수 선언문이 코드의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징</li>
+    </ul>
+    
+    <button onclick="ex05()">예제 04-05</button>
+
+    <script>
+        // 예제 04-05
+        const ex05 = () => {
+            console.log(score); // undefined
+    
+            var score; // 변수 선언문
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05.값의 할당</title>
+</head>
+<body>
+    <h1>1.할당 연산자(=)</h1>
+    <ul>
+        <li>변수에 값을 할당(대입, 저장) 할 때 사용</li>
+        <li>우변의 값을 좌변의 변수에 할당</li>
+    </ul>
+    <script>
+        // 예제 04-05
+        var score;  // 변수 선언
+        score = 80; // 값의 할당
+
+        // 예제 04-06
+        var score = 80; // 변수 선언과 값의 할당
+    </script>
+
+    <button onClick="ex08()">예제 04-08</button>
+    <button onClick="ex09()">예제 04-09</button>
+    <button onClick="ex10()">예제 04-10</button>
+
+    <script>
+        const ex08 = () => {
+            console.log(score2)     // undefined
+
+            var score2;             // 1.변수 선언
+            score2 = 80;            // 2.값의 할당
+
+            console.log(score2);    // 80
+        }
+
+        const ex09 = () => {
+            console.log(score3);    // undefined
+
+            var score3 = 80;        // 변수 선언과 값의 할당
+
+            console.log(score3);    // 80
+        }
+
+        const ex10 = () => {
+            console.log(score4);    // undefined
+
+            score4 = 80;            // 값의 할당
+            var score4;             // 값의 선언
+
+            console.log(score4);    // 80
+        }
+    </script>
+
+
+    
+</body>
+</html>

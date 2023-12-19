@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.변수 선언</title>
+</head>
+<body>
+    <h1>1. 변수 선언이란?</h1>
+    <ul>
+        <li>변수를 생성하는 것</li>
+        <li>변수를 사용하려면 반드시 선언이 필요</li>
+        <li>변수를 선언하는 키워드로는 var, let, const 키워드를 사용</li>
+    </ul>
+
+
+    <b><u>ES5 vs ES6</u></b>
+    <ul>
+        <li>ES5</li>
+        <ul>
+            <li>var 키워드</li>
+        </ul>
+        <li>ES6</li>
+        <ul>
+            <li>let, const 키워드</li>
+            <li>기본적으로 하위 호환성 유지(ES5지원)</li>
+            <li>ES6는 ES5의 상위 집합</li>
+        </ul>
+ 
+    </ul>
+
+    <b><u>키워드</u></b>
+    <ul>
+        <li>명령어</li>
+        <li>자바스크립트 엔진은 키워드를 만나면 자신이 수행해야 할 약속된 동작을 수행</li>
+    </ul>
+
+    <b><u>undefined</u></b>
+    <ul>
+        <li>자바스크립트에서 제공하는 원시타입의 값</li>
+        <li>변수에 값이 할당되지 않음</li>
+    </ul>
+
+    <h1>2. 변수 선언 단계</h1>
+    <ol type="i">
+        <li>선언 단계 : 변수 이름을 등록</li>
+        <li>초기화 단계 : 암묵적으로 undefined를 할당해 초기화</li>
+    </ol>
+
+    <b><u>변수 이름은 어디에 등록?</u></b>
+    <ul>
+        <li>실행 컨텍스트</li>
+        <li>변수 이름과 변수 값은 key - value 형식인 객체로 등록되어 관리</li>
+    </ul>
+
+    <b><u>참조에러(ReferencError)</u></b>
+    <ul>
+        <li>선언하지 않은 식별자에 접근하면 발생</li>
+    </ul>
+
+    <script>
+        // 예제 04-04
+        var score; // 변수 선언(변수 선언문)
+    </script>
+
+
+
+</body>
+</html>
