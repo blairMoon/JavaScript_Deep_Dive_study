@@ -48,7 +48,7 @@ GitHub 블로그는 GitHub 라는 원격 소스코드 저장 플랫폼의 GitHub
 
 # What’s next
 
-[Do Git2](./Do%20Git2.md)
+[Do Git2](Do%20Git2.md)
 
 GitHub에 저장 공간을 만들고, `(***).github.io` 라는 주소를 갖는 블로그를 개설해봅시다.
 
