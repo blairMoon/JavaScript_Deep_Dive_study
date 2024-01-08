@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03.템플릿 리터럴</title>
+</head>
+
+    <h1>1. 탬플릿 리터럴</h1>
+    <ul>
+        <li>백틱을 사용</li>
+        <li>아래에 편리한 문자열 처리 기능을 제공</li>
+        <ul>
+            <li>멀티라인 문자열</li>
+            <li>표현식 삽입</li>
+            <li>태그드 탬플릿</li>
+        </ul>
+    </ul>
+
+    <button onclick="ex08()">예제 06-08</button>
+
+    <script>
+        // 예제 06-08
+        const ex08 = () => {
+            var template = `Template literal`;
+            console.log(template);
+        }
+    </script>
+
+    <h2>(1) 멀티라인 문자열</h2>
+    <ul>
+        <li>일반 문자열 내에서 줄바꿈(개행)이 허용되지 않음</li>
+    </ul>
+
+    <script>
+        // 예제 06-09
+        /*
+        * var str = 'Hello
+        * wolrd';
+        * // Uncaught SyntaxError: Invalid or unexpected token
+        */
+    </script>
+    
+    <button onclick="ex10()">예제 06-10</button>
+    <script>
+        // 예제 06-10
+        const ex10 = () => {
+            var template = '<ul\n\t<li><a href="#">Home</a></li>\n<ul>';
+            console.log(template);
+        }
+    </script>
+
+    <button onclick="ex11()">예제 06-11</button>
+
+    <script>
+        // 예제 06-11
+        const ex11 = () => {
+            var template = `<ul
+	<li><a href="#">Home</a></li>
+<ul>`;
+            console.log(template);
+        }
+    </script>
+
+    <h2>(2) 표현식 삽입</h2>
+    <ul>
+        <li>문자열은 문자열 연산자 +를 사용해 연결</li>
+        <li>탬플릿 리터럴에서는 ${ }으로 표현식을 감싸서 사용 가능</li>
+    </ul>
+
+    <button onclick="ex12()">예제 06-12</button>
+
+    <script>
+        // 예제 06-12 문자열 연결
+        const ex12 = () => {
+            var first = 'Ung-mo';
+            var last = 'Lee';
+
+            // ES5 : 문자열 연결
+            console.log('My name is ' + first + ' ' + last + '.'); // My name is Ung-mo Lee.
+        }
+    </script>
+    
+    <button onclick="ex13()">예제 06-13</button>
+
+    <script>
+        // 예제 06-13 문자열 연결
+        const ex13 = () => {
+            var first = 'Ung-mo';
+            var last = 'Lee';
+
+            // ES6 : 문자열 연결
+            console.log(`My name is ${first} ${last}.`); // My name is Ung-mo Lee.
+        }
+    </script>
+
+</body>
+</html>

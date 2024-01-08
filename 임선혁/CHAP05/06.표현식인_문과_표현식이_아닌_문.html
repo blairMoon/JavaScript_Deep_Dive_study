@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06.표현식인 문과 표현식이 아닌 문</title>
+</head>
+<body>
+
+    <button onclick="ex11()">예제 05-11</button>
+    
+    <script>
+        // 예제 05-11
+        const ex11 = () => {
+            // 변수 선언문은 값으로 평가될 수 없으므로 표현식이 아니다
+            var x;
+        }
+        
+        
+    </script>
+    
+    <button onclick="ex12()">예제 05-12</button>
+    
+    <script>
+        // 예제 05-12
+        // 표현식이 아닌 문은 값처럼 사용할 수 없다.
+        const ex12 = () => {
+            // var foo = var x;
+        }
+        </script>
+
+    <button onclick="ex13()">예제 05-13</button>
+    <script>
+        // 예제 05-13
+        // 변수 선언문은 표현식이 아닌 문이다.
+        const ex13 = () => {
+            var x;
+    
+            // 할당문으 그 자체가 표현식이 되지만 완전한 문이기도 하다.
+            // 즉, 할당문은 표현식인 문이다.
+            x = 100;
+            return x;
+        }
+    </script>
+
+    <button onclick="ex14()">예제 05-14</button>
+    <script>
+        // 예제 05-14
+        // 표현식인 문은 값처럼 사용할 수 있다.
+        const ex14 = () => {
+            var x = ex13();
+            var foo = x;
+            console.log(foo); // 100
+        }
+    </script>
+
+    <h1>+ 완료 값</h1>
+    <ul>
+        <li>크롬 개발자 도구에서 표현식이 아닌 문을 실행하면 언제나 undefined를 출력</li>
+        <li>이를 완료 값이라고 함</li>
+        <li>표현식인 문을 실행하면 언제나 평가된 값을 반환</li>
+    </ul>
+
+</body>
+</html>

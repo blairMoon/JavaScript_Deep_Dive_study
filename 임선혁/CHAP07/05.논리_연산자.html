@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05.논리 연산자</title>
+</head>
+
+    <h1>1.논리 연산자</h1>
+    <ul>
+        <li>||</li>
+        <li>&&</li>
+        <li>!</li>
+    </ul>
+
+    
+    <h3> true && dom요소 = <span id="1" onclick="ex01()">?</span></h3>
+    <h3> false && dom요소 = <span id="2" onclick="ex02()">?</span></h3>
+
+    <h3> DOM 요소 = <span id="3">존재</span></h3>
+
+
+    <script>
+        let $element1 = document.getElementById("1");
+        let $element2 = document.getElementById("2");
+        let $element3 = document.getElementById("3");
+
+        const ex01 = () => {
+            $element1.innerText = true && $element3.innerText;
+        }
+        const ex02 = () => {
+            $element2.innerText = false && $element3.innerText;
+            // $element2.innerText = (false && $element3.innerText) ? $element3.innerText : '';
+        }
+    </script>
+    
+    <script>
+
+    </script>
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02.할당 연산자</title>
+</head>
+
+    <h1>1. 비교 연산자</h1>
+    <ul>
+        <li>좌항과 우항의 피연산자를 비교한 다음 그 결과를 불리언 값으로 반환</li>
+        <li>if 문이나 for 문과 같은 제어문의 조건식에서 주로 사용</li>
+    </ul>
+
+    <h2>(1) 동등/일치 비교 연산자</h2>
+    <ul>
+        <li>==</li>
+        <li>===</li>
+        <li>!=</li>
+        <li>!==</li>
+    </ul>
+
+    <h3>0 == -0 = <span id="1" onclick="ex01()">?</span></h3>
+    <h3>0 === -0 = <span id="2" onclick="ex02()">?</span></h3>
+    <h3>NaN == NaN = <span id="3" onclick="ex03()">?</span></h3>
+    <h3>NaN === NaN = <span id="4" onclick="ex04()">?</span></h3>
+
+
+    <script>
+        let $element1 = document.getElementById("1");
+        let $element2 = document.getElementById("2");
+        let $element3 = document.getElementById("3");
+        let $element4 = document.getElementById("4");
+
+        const ex01 = () => {
+            $element1.innerText = 0 == -0;
+        }
+        const ex02 = () => {
+            $element2.innerText = 0 === -0;
+        }
+        const ex03 = () => {
+            $element3.innerText = NaN == NaN;
+        }
+        const ex04 = () => {
+            $element4.innerText = NaN === NaN;
+        }
+    </script>
+
+
+    <h2>(2) 대소 관계 비교 연산지</h2>
+    
+    <ul>
+        <li>&gt;</li>
+        <li>&lt;</li>
+        <li>&gt;=</li>
+        <li>&lt;=</li>
+    </ul>
+    
+</body>
+</html>

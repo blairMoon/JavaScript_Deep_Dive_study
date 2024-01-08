@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04.문</title>
+</head>
+<body>
+    <h1>1. 문</h1>
+    <ul>
+        <li>프로그램을 구성하는 기본 단위이자 최소 실행 단위</li>
+        <li>문의 집합으로 이루어진 것이 바로 프로그램</li>
+        <li>컴퓨터에 내리는 명령문</li>
+        <li>선언문, 할당문, 조건문, 반복문 등으로 구분</li>
+    </ul>
+
+    <h1>2. 토큰</h1>
+    <ul>
+        <li>문법적인 의미를 가짐</li>
+        <li>문법적으로 더 이상 나눌 수 없는 코드의 기본 요소를 의미</li>
+        <li>문은 여러 토큰으로 구성</li>
+    </ul>
+
+    <button onclick="ex09()">예제 05-09</button>
+
+    <script>
+        // 예제 05-09
+        const ex09 = () => {
+            const statement = prompt('선언문|할당문|함수 선언문|조건문|반복문');
+            switch(statement){
+                case '선언문' :
+                    console.log('var x'); 
+                    break;
+                case '할당문' :
+                    console.log('x = 5');
+                    break;
+                case '조건문' :
+                    console.log('if(x  > 1){ console.log(x);}')
+                    break;
+                case '반복문' : 
+                    console.log('for(var i = 0; i < 2; i++){console.log(i);}');
+                    break;
+                default :
+                    console.log('잘못 입력하셨습니다.')
+                    break;
+            }
+        }
+    </script>
+
+</body>
+</html>

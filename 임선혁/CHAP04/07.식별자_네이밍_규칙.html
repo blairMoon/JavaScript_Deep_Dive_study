@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07.식별자 네미이 규칙</title>
+</head>
+<body>
+    <h1>1.식별자</h1>
+    <ul>
+        <li>어떤 값을 구별해서 식별해낼 수 있는 고유한 이름</li>
+        <li>준수해야할 네이밍 규칙이 있음</li>
+    </ul>
+
+    <script>
+        // 예제 04-12
+        // 변수는 쉼표(,)로 구분해 하나의 문에서 여러 개를 한번에 선언할 수 있음
+        // 하지만 가독성이 나빠지므로 권장하지는 않는다.
+        var person1, $elem, _name, first_name, vali;
+        
+
+        // 가독성이 괜찮은 경우.
+        const obj = {
+            person2 : {
+                name : '임선혁',
+                gender : '남성',
+            },
+            pet : {
+                name :  '유미',
+                type : '고양이'
+            }
+        }
+
+        console.log('person1', obj.person2.name);
+        console.log('pet1', obj.pet.name);
+
+        const { person2, pet } = obj;
+        console.log('person2', person2.name);
+        console.log('pet2', pet.name);
+        
+        // 예제 04-13
+        // ES5부터 식별자를 만들 때 유니코드 문자를 허용
+        // 알파벳 외의 한글이나 일본어 식별자도 사용할 수 있음
+        // 하지만, 알파벳 외의 유니코드 문자로 명명된 식별자를 사용하는 것은 바람직하지 않으며 권장하지 않음
+        var 이름, 일본어;
+
+        // 예제 04-14 명명규칙 위배
+        /**
+         * var first-name;  // 허용되지 않은 특수문자 사용
+         * var 1st;         // 숫자로 시작
+         * var this;        // 예약어 사용
+        */
+
+
+        // 예제 04-15 대소문자 구별
+        // SQL에서 대소문자 구별이 안되는 경우가 많음
+        var firstname;
+        var firstName;
+        var FIRSTNAME;
+
+        // 예제 04-16 좋은 변수 이름은 코드의 가독성을 높임
+        // 변수 선언에 별도의 주석이 필요하다면 변수의 존재 목적을 명확히 드러내지 못하는 것
+        var x = 3;       // NG, x 변수가 의미하는 바를 알 수 없다.
+        var score = 100; // OK, score 변수는 점수를 의미
+        
+        // 예제 04-17
+        // 경과 시간, 단위는 날짜다
+        var d; // NG
+        var elapsedTimeInDays; // OK
+
+        // 예제 04-18
+        // 카멜 케이스
+        var firstName;
+
+        // 스네이크 케이스
+        var first_name
+
+        // 파스칼 케이스
+        var firstName
+
+        // 헝가리언 케이스
+        /**
+         * var strFirstName; // type + identifier
+         * var $elem = document.getElementById('myId'); // DOM 노드
+         * var observalble$ = fromEvent(document, 'click');  // RxJS 옵져버블
+        */
+    </script>
+
+    
+</body>
+</html>

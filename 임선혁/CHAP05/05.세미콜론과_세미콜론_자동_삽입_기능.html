@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05.세미콜론과 세미콜론 자동 삽입 기능</title>
+</head>
+<body>
+    <h1>1. 세미콜론(;)</h1>
+    <ul>
+        <li>문의 종료를 나타냄</li>
+        <li>문의 끝에 붙이는 세미콜론은 옵션임</li>
+        <li>세미콜론 자동 삽입 기능이 암묵적으로 수행</li>
+        <li>세미콜론을 붙이는 것을 권장</li>
+    </ul>
+
+    <button onclick="ex10()">예제 05-10</button>
+
+    <script>
+        // 예제 05-10
+        const ex10 = () => {
+            function foo1() {
+                return 
+                {}
+            }
+            function foo2() {
+                return {}
+            }
+
+            console.log('foo1', foo1()) // foo1 undefined
+            console.log('foo2', foo2()) // foo2 {}
+        }
+    </script>
+
+</body>
+</html>

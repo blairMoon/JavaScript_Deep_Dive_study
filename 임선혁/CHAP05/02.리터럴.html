@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02.리터럴</title>
+</head>
+<body>
+    <h1>1. 리터럴</h1>
+    <ul>
+        <li>사람이 이해할 수 있는 문자 또는 약속된 기호를 사용해 생성판 표기법</li>
+    </ul>
+
+    <button onclick="ex03()">예제 05-03</button>
+    
+    <script>
+        // 예제 05-03
+        const ex03 = () => {
+            console.log('정수 리터럴', 100);
+            console.log('부동 소수점 리터럴', 10.5);
+            console.log('2진수 리터럴', 0b01000001);
+            console.log('8진수 리터럴', 0o101);
+            console.log('16진수 리터럴', 0x41);
+            console.log('문자열 리터럴', 'Hello', "World");
+            console.log('불리언 리터럴', true, false);
+            console.log('null 리터럴', null); 
+            console.log('undefined 리터럴', undefined);
+            console.log('객체 리터럴', { name : 'Lee', address : 'Seoul' });
+            console.log('배열 리터럴', [1, 2, 3]);
+            console.log('함수 리터럴', function(){});
+            console.log('정규 표현식 리터럴', /[A-Z]+/g)
+        }
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02. 문자열 타입</title>
+</head>
+
+    <h1>1. 문자열</h1>
+    <ul>
+        <li>''(작은따옴표)</li>
+        <li>""(킅따옴표)</li>
+        <li>``(백틱)</li>
+    </ul>
+
+    <button onclick="ex06()">예제 06-06</button>
+    
+    <script>
+        // 예제 06-06
+        const ex06 = () => {
+            // 문자열 타입
+            var string;
+            string = '문자열'; // 작은 따옴표
+            string = "문자열"; // 큰 따욤표
+            stirng = `문자열`; // 백틱
+            
+            string = '작은따옴표로 감싼 문자열 내의 "큰 따옴표는" 문자열로 인식된다.';
+            string = "큰따옴표로 감싼 문자열 내의 '작은 따옴표는' 문자열로 인식된다.";
+        }
+    </script>
+
+    <button onclick="ex07()">예제 06-07</button>
+
+    <script>
+        // 예제 06-07
+        const ex07 = () => {
+            // 따옴표로 감싸지 않은 hello를 식별자로 인식
+            var string = hello; // Uncaught ReferenceError: hello is not defined
+        }
+    </script>
+
+    
+
+
+
+
+</body>
+</html>

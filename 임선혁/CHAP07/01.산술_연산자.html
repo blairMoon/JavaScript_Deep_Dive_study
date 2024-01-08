@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01.산술 연산자</title>
+</head>
+
+    <h1>1. 산술 연산자</h1>
+    <ul>
+        <li>피연산자를 대상으로 수학적 계산을 수행해 새로운 숫자 값을 만듦</li>
+        <li>산술 연산이 불가능한 경우, NaN을 반환</li>
+    </ul>
+
+    <h2>(1) 이항 산술 연산자</h2>
+    <ul>
+        <li>+</li>
+        <li>-</li>
+        <li>*</li>
+        <li>/</li>
+        <li>%</li>
+    </ul>
+
+    <h2>(2) 단항 산술 연산자</h2>
+    <ul>
+        <li>++</li>
+        <li>--</li>
+        <li>+</li>
+        <li>-</li>
+    </ul>
+
+    <h2>(3) 문자열 연결 연산자(+)</h2>
+    <h3>'1' + 2 + 1 = <span id="1" onclick="ex01()">?</span></h3>
+    <h3>1 + 2 + '1' = <span id="2" onclick="ex02()">?</span></h3>
+    <h3>1 + 2 = <span id="3" onclick="ex03()">?</span></h3>
+    <h3>1 + true = <span id="4" onclick="ex04()">?</span></h3>
+    <h3>1 + false = <span id="5" onclick="ex05()">?</span></h3>
+    <h3>1 + null = <span id="6" onclick="ex06()">?</span></h3>
+    <h3>1 + undefined = <span id="7" onclick="ex07()">?</span></h3>
+
+
+    <script>
+        let $element1 = document.getElementById("1");
+        let $element2 = document.getElementById("2");
+        let $element3 = document.getElementById("3");
+        let $element4 = document.getElementById("4");
+        let $element5 = document.getElementById("5");
+        let $element6 = document.getElementById("6");
+        let $element7 = document.getElementById("7");
+
+        const ex01 = () => {
+            $element1.innerText = '1' + 2 + 1;
+        }
+        const ex02 = () => {
+            $element2.innerText = 1 + 2 + '1';
+        }
+        const ex03 = () => {
+            $element3.innerText = 1 + 2;
+        }
+        const ex04 = () => {
+            $element4.innerText = 1 + true;
+        }
+        const ex05 = () => {
+            $element5.innerText = 1 + false;
+        }
+        const ex06 = () => {
+            $element6.innerText = 1 + null;
+        }
+        const ex07 = () => {
+            $element7.innerText = 1 + undefined;
+        }
+    </script>
+    
+</body>
+</html>
