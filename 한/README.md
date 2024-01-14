@@ -3,8 +3,9 @@
 
 나머지 단원들을 3부로 분류해 봤습니다.
 학습흐름을 나름 반영 해봤습니다
+![제목 없는 다이어그램 drawio](https://github.com/blairMoon/JavaScript_Deep_Dive_study/assets/131014787/e533bdcc-bc34-49b0-82e9-3380f53dee9f)
 
-![[제목 없는 다이어그램.drawio.png]]
+
 - 그리고 각 부에 속한 단원은 아래와 같습니다
 
 >
@@ -24,5 +25,5 @@
 중요도가 높은 단원은 최소 2번이상 다뤄봤으면 합니다.
 
 
-![[JS딥다이브 진도-1.png]]
+![JS딥다이브 진도-1](https://github.com/blairMoon/JavaScript_Deep_Dive_study/assets/131014787/1990111f-e15b-4971-9e27-ca882cf03269)
 
