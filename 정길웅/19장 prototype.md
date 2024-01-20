@@ -1,134 +1,66 @@
----
-tistoryBlogName: ruukr8080
-tistoryTitle: 연산자
-tistoryVisibility: 연산자.js,딥다이브
-tistoryCategory: "0"
-tistorySkipModal: true
-tistoryPostId: "21"
-tistoryPostUrl: https://ruukr8080.tistory.com/21
+## <span style="color:#f58f00;">19.1 객체지향 프로그래밍</span>
+<span style="color:red">red</span>
 ---
 
-# operator
-연산자
+객체지향 프로그래밍이란 `속성`값들을 사용하여 프로그램을 인식하거나 구별하려는 방향성을 의미한다. 예를 들어 사람에게는 성별, 나이, 체중, 학력, 성격 등 다양한 속성이 있다. 그 중 "이름"과 "주소"만 관심이 있다고 가정해보자. 이처럼 다양한 속성 중 몇 가지만 추려서 표현해내는 것을 `추상화`라고 한다.
 
+```javascript
+const person = {
+	name:'lee'
+  	address: 'seoul'
+}
 
-연산자란 프로그래밍에서 쓰이는 기호임.
+console.log(person) // {name: 'lee', address: 'seoul'}
 
-## 연산자 종류
-[산술 연산자](%EC%97%B0%EC%82%B0%EC%9E%90.md) : `+, -, *, / `
-[문자열 연산자](%EC%97%B0%EC%82%B0%EC%9E%90.md) :  `""+"" `
-[증감 연산자](%EC%97%B0%EC%82%B0%EC%9E%90.md) : `++, --`
-[대입연산자](%EC%97%B0%EC%82%B0%EC%9E%90.md) : `+=, -=, /=, *=, %=`
-[비교 연산자](%EC%97%B0%EC%82%B0%EC%9E%90.md) :``==, !=, >, <, >=, <=`
-[[#정밀한 비교 연산자]] : `===`
-[[#논리 연산자]] : `&&, ||, !` 
-[[#삼항 조건 연산자]] : `(조건 ? 참 : 거짓)`
-+
-	ES7에새로운 추가 된 [[#지수 연산자]]
-
- [[#지수 연산자]] : `**`
-
----
-
-## 산술 연산자
-`+, -, *, / `
-```js
-var a = 1 + 2; // 3
-var b = 5 - 3; // 2
-var c = 2 * 4; // 8
-var d = 6 / 4; // 1.5
-var e = 8 % 3; // 2
+const circle = {
+  radius: 5,
+  getDiameter(){
+    return 2 * this.radius;
+  }
+}
+console.log(circle); // {radius:5, getDiameter: f}
+console.log(circle.getDiameter()); // 10
 ```
 
-## 문자열 연산자
-`"문자열"+ `
-```js
-var string = 'hello ' + 'world'; // 'hello world'
-var string2 = 'hi' + 9; // 'hi9'
-var string3 = 1 + 'what' + 2; // '1what2'
-var string4 = 3 + 4 + 'wow'; // '7wow'
-문자열이 섞이면 문자열로 출력됨
-```
+이처럼 속성을 통해 여러 개의 값을 하나의 단위로 구성한 복합적인 자료구조를 객체라 한다.
 
-## 증감 연산자
-`변수에 1을 더하거나 1을 빼줍`
-
-```js 
-var i = 0;
-i++; // i는 1이 됩니다.
-alert(i++); // 1을 먼저 alert한 후에 ++되어 i는 2가됩니다.
-alert(++i); // 먼저 ++한 후에 alert하여 3을 alert하게 됩니다.
-i = i + 1; // i++과 같습니다.
-```
-
----
-## 대입연산자 
-`=, +=, -=, /=, *=, %= ` 
-```js
-var i = 10;
-i += 2; // 12 (i = i + 2와 같음)
-i -= 3; // 9 (i = i - 3과 같음)
-i *= 4; // 36 (i = i * 4와 같음)
-i %= 5; // 1 (i = i % 5와 같음)
-```
-
-
-## 비교 연산자
-`==, !=, >, <, >=, <=` 같다,같지않다,초과,미만,이상,이하
-```js
-100 == 10 * 10; // true
-6 != 2 * 2; // true
-2 * 5 > 3 * 3; // true
-6 * 3 <= 2 * 9; // true
-```
-
-## 정밀한 비교 연산자
-`===. !==` 타입이 같은지 비교할 떄 씀
-```js
-0 === ' ' // false
-0 === false // false
-0 === [] // false
-
-```
-
-
-## 논리 연산자
-`&&, ||, !` and,or,not
-```js
-var a = 10;
-var b = 20;
-(a < b) && (a * 2 == b); // true
-(a > b) || (a * 2 <= 20); // true
-!(a < b); // false
-```
->&&   : &&기준으로 좌항이 참이면 우항으로 감.
->||      : || 기준으로 좌항이 거짓이면 우항으로 감.
->!       : 참이면 false 거짓이면 true로 출력함.  
-
-
-## 삼항 조건 연산자
-`(조건 ? 참 : 거짓)`
-```js
-var ternary = i > 1 ? "3" : "4"// (i가 1보다 크면?) "3" / (i가 1보다 안크면?) "4"
-var ternary = testScore  >= 80 ? "합격" : "불합" // (테스트점수 80점 이상?) 합격 /  (테스트점수 80점 미만?) 불합격
-
-// 
-```
-조건이 참이면 : 기준 좌항이 출력, 거짓이면 우항이 출력 되는거임 
-
----
-+
-## 지수 연산자 
-`**` 제곱
-```js
-2 ** 3 = 8; //2의 3승 8
-2 ** 0 =1; //2의 0승 2
-```
+예제 중 circle 부분을 확인해보자. radius 부분은 상태로, getDiameter부분을 동작으로 볼 수 있다. 이때 객체의 상태 데이터를 `프로퍼티`, 동작 데이터를 `메서드`라고 부른다. 
+## <span style="color:#f58f00;">19.2 상속과 프로토타입</span>
 
 ---
 
+상속은 불필요하게 반복되는 데이터를 줄여주고 가독성을 높여준다는 데에 있어 의미가 있다. 아래의 예시를 살펴보자
+
+```javascript
+function Circle(radius){
+  this.radius = radius;
+  this.getDouble = function() {
+    return this.radius * 2
+  }
+}
+Circle.prototype.getArea = function () {
+  return Math.PI * this.radius ** 2;
+};
 
 
+const circle1 = new Circle(1);
+const circle2 = new Circle(2);
 
+console.log(circle1.getDouble() === circle2.getDouble()) // false
+console.log(circle1.getArea() === circle2.getArea()) // true
+
+```
+위 예시에 있는 getDouble 메서드와 getArea 메서드는 circle1이나 circle2에 공통적으로 있기에 같은 메서드를 공유한 것처럼 보이지만 실제로는 일반적인 방식을 사용했을 시 메서드가 복사가 되고 prototype을 활용한 메서드는 바인딩되어 상속으로 유지되고 있음을 알 수 있다. 
+
+## <span style="color:#f58f00;">19.3 프로토타입 객체</span>
+
+---
+모든 객체는 `[[Prototype]]`이라는 내부 슬롯을 가지며 이 내부 슬롯의 값은 프로토타입의 참조이다. 객체가 생성될 때 객체 생성 방식에 따라 프로토타입이 결정되고 `[[Prototype]]`에 저장이 된다.
+
+### <span style="color:#87CEEB;">19.3.1 __proto__ 접근자 프로퍼티</span>
+
+모든 객체는 `__proto__` 접근자 프로퍼티를 통해 자신의 프로토타입, 즉 [[Prototype]] 내부 슬롯에 간접적으로 접근할 수 있다.
+
+<span style="color:#008000">`__proto__`는 접근자 프로퍼티다.</span>
 
 
